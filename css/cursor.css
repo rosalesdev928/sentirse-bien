@@ -1,0 +1,23 @@
+/* ===== Cursor con la Ψ del logo (lo activa js/cursor.js solo con mouse y sin "reducir movimiento") ===== */
+/* Sin la clase psi-on (táctil, reducir movimiento o sin JS) todo queda con el cursor normal. */
+html.psi-on, html.psi-on * { cursor: none; }
+/* En campos de texto vuelve el cursor de escritura y la Ψ se oculta */
+html.psi-on :is(input:not([type="checkbox"]):not([type="radio"]), textarea, select) { cursor: auto; }
+
+.psi-cursor, .psi-dot {
+  position: fixed; left: 0; top: 0; z-index: 9999;
+  pointer-events: none; /* nunca bloquea clics */
+  will-change: transform, opacity;
+}
+.psi-cursor { width: 30px; height: 27px; margin: -13px 0 0 -15px; transition: opacity .2s ease; }
+.psi-cursor svg { display: block; width: 100%; height: 100%; overflow: visible; transition: transform .2s ease; }
+/* Contorno blanco + relleno violeta: se lee sobre fondos claros y oscuros */
+.psi-cursor path { fill: var(--brand); stroke: #fff; stroke-width: 150; paint-order: stroke; stroke-linejoin: round; transition: fill .2s ease, stroke .2s ease; }
+.psi-cursor.is-hover svg { transform: scale(1.6) rotate(-8deg); }
+/* Sobre botones y enlaces: más grande, en coral y casi transparente, para no tapar el texto de abajo */
+.psi-cursor.is-hover path { fill: rgba(244, 134, 106, .18); stroke: var(--sun); stroke-width: 70; }
+.psi-cursor.is-down svg { transform: scale(.85); }
+.psi-cursor.is-hidden { opacity: 0; }
+
+.psi-dot { width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; border-radius: 50%; opacity: 0; }
+.psi-dot.leaf { width: 10px; height: 6px; margin: -3px 0 0 -5px; border-radius: 0 100% 0 100%; }

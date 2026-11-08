@@ -1,0 +1,6 @@
+ILUSTRACIONES
+=============
+Las imágenes de esta carpeta (nube.jpg, ayuda.jpg, cerebro.jpg, video1-3.jpg) son creaciones propias
+del cliente y se pueden usar en el sitio.
+
+Las fotos de assets/img (Roxana, charla, mural) son del cliente.

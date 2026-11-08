@@ -1,0 +1,36 @@
+VIDEO DEL INICIO
+================
+1) Guarda aquí el video como  hero.mp4
+   - Horizontal (16:9), 1080p o menos, 10 a 20 segundos, SIN sonido, menos de 8 MB.
+   - Mejor si es suave y lento (té, plantas, luz entrando por una ventana, manos). Nada brusco.
+   - Puede ser un video grabado por Roxana en su espacio de trabajo, o uno de un banco gratuito
+     (Pexels, Pixabay, Coverr) revisando que la licencia permita uso comercial.
+2) En index.html busca el comentario "Para poner el video real" y en la etiqueta <video> escribe
+   data-src="assets/video/hero.mp4".
+
+Mientras data-src esté vacío, la página muestra la imagen de portada (poster) y funciona igual.
+Aunque haya video, en celular, con "ahorro de datos" o con "reducir movimiento" se ve solo la portada.
+
+VIDEOS DE LAS COLUMNAS LATERALES (pantallas de 1400 px o más)
+=============================================================
+  Inicio, junto a «Roxana Gutiérrez»     lado-1.jpg (imagen que se mueve sola)
+  Servicios, junto a Mindfulness         lado-2.jpg (imagen que se mueve sola)
+  Servicios, junto a «Primera cita»      videoplayback.mp4
+  Sobre Roxana, junto a Formación        lado-3.jpg (imagen que se mueve sola)
+  Charlas, junto a los temas             escena-colegio-charla.mp4
+  Reservar, junto a Contacto             escena-consultorio-virtual.mp4
+
+Para poner un video en una columna que hoy tiene imagen: agrega dentro de su <div class="rail-media">
+  <video autoplay muted loop playsinline preload="none" data-src="assets/video/NOMBRE.mp4" tabindex="-1"></video>
+Formato: vertical 9:16, sin sonido, menos de 2 MB (MP4 H.264). js/rails.js lo carga solo.
+En celular, tablet, con "ahorro de datos" o "reducir movimiento" no se descarga ningún video.
+
+VIDEOS DE FONDO DE LA BANDA SUPERIOR (páginas interiores)
+=========================================================
+  servicios.html     lado-1-respiracion.mp4
+  sobre-roxana.html  lado-3-plantas.mp4   (video claro: lleva un velo más oscuro)
+  charlas.html       lado-4-ondas.mp4
+  reservar.html      lado-2-lluvia-y-luz.mp4
+Para cambiar uno, reemplaza el archivo con el mismo nombre o cambia data-src en la <video class="band-video">
+de esa página. Se cargan solo en pantallas de 768 px o más, sin "reducir movimiento" ni "ahorro de datos";
+en celular se ve el fondo tinta.

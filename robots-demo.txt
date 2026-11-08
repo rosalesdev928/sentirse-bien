@@ -1,0 +1,4 @@
+# Solo para la demo en Vercel (vercel.json sirve este archivo como /robots.txt).
+# El robots.txt real del sitio no cambia.
+User-agent: *
+Disallow: /

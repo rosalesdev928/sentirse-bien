@@ -1,0 +1,14 @@
+# Lo que NO se sube a la demo de Vercel (el navegador no lo necesita)
+.git
+.github
+.vercel
+supabase
+tools
+partials
+docs
+*.md
+# En la demo /robots.txt lo sirve robots-demo.txt (ver vercel.json); el sitemap aún dice TU-DOMINIO
+robots.txt
+sitemap.xml
+# Tokens y variables locales (la CLI crea .env.local al vincular): nunca se suben
+.env*
